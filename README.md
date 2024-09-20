@@ -10,7 +10,7 @@ https://prowse.tech
 - [ ] 8 skipped now (Mutli cloud setup and configuration takes time)
 - [x] 9 (which is not covered in the webinar)
 
-I was using default Amazon linux, In lab 5 I could not use the [scripts provided](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/solution/scripts/apache-mkdocs.yaml) and needs ubuntu and instead I prepared [mine](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/scripts/httpd-web-server.yaml) just exercise some brain muscle.
+I was using default Amazon linux, In lab 5 I could not use the [scripts provided](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/solution/scripts/apache-mkdocs.yaml) which assumes ubuntu and instead I prepared [mine](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/scripts/httpd-web-server.yaml) just exercise some brain muscle.
 
 
 ## Introduction
