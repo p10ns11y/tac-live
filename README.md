@@ -6,7 +6,12 @@ https://prowse.tech
 
 # Completed labs
 
-1 -7 and 9 (which is not covered in the webinar)
+- [x] Labs 1 - 7
+- [ ] 8 skipped now (Mutli cloud setup and configuration takes time)
+- [x] 9 (which is not covered in the webinar)
+
+I was using default Amazon linux, In lab 5 I could not use the [scripts provided](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/solution/scripts/apache-mkdocs.yaml) and needs ubuntu and instead I prepared [mine](https://github.com/p10ns11y/oreilly-terraform-live-course-session/blob/main/lab-05/scripts/httpd-web-server.yaml) just exercise some brain muscle.
+
 
 ## Introduction
 
@@ -100,7 +105,7 @@ I hope you enjoy the webinar. If you have any questions you can contact me at:
 
   https://developer.hashicorp.com/terraform/tutorials/certification/associate-review
 
-  ### Links to the webinar sessions
+## Links to the webinar sessions
 
   [Day 1](https://learning.oreilly.com/live-events/-/0636920082746/0642572006651/?utm_medium%3Dcalendar%26utm_source%3Dschedule%252Breminder%26utm_campaign%3Dcalendar%252Bgoogle%26utm_content%3Dhashicorp-terraform-associate-exam-cram&sa=D&source=calendar&usd=2&usg=AOvVaw3oj9PZH2yEdbHuPx6g5rPz)
 
