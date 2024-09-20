@@ -6,18 +6,18 @@ terraform {
     }
   }
 
-  required_version = ">= 1.9.0"
+  required_version = ">=1.9.0"
 }
 
 provider "aws" {
   region = "eu-north-1"
 }
 
-resource "aws_instance" "lab_06" {
+resource "aws_instance" "app_server" {
   ami           = "ami-0c6da69dd16f45f72"
   instance_type = "t3.micro"
 
   tags = {
-    Name      = var.instance_name
+    Name = "Lab-03-AWS-Instance"
   }
 }

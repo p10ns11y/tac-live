@@ -1,0 +1,107 @@
+A newer release of "Amazon Linux" is available.
+  Version 2023.5.20240916:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+[peramsathyam@ip-172-31-20-186 ~]$ cat /etc/os-release
+NAME="Amazon Linux"
+VERSION="2023"
+ID="amzn"
+ID_LIKE="fedora"
+VERSION_ID="2023"
+PLATFORM_ID="platform:al2023"
+PRETTY_NAME="Amazon Linux 2023.5.20240903"
+ANSI_COLOR="0;33"
+CPE_NAME="cpe:2.3:o:amazon:amazon_linux:2023"
+HOME_URL="https://aws.amazon.com/linux/amazon-linux-2023/"
+DOCUMENTATION_URL="https://docs.aws.amazon.com/linux/"
+SUPPORT_URL="https://aws.amazon.com/premiumsupport/"
+BUG_REPORT_URL="https://github.com/amazonlinux/amazon-linux-2023"
+VENDOR_NAME="AWS"
+VENDOR_URL="https://aws.amazon.com/"
+SUPPORT_END="2028-03-15"
+
+[peramsathyam@ip-172-31-20-186 ~]$ history
+    1  cat /etc/os-release
+    2  sudo systemctl status httpd
+    3  history
+
+[peramsathyam@ip-172-31-20-186 ~]$ chmod --help
+Usage: chmod [OPTION]... MODE[,MODE]... FILE...
+  or:  chmod [OPTION]... OCTAL-MODE FILE...
+  or:  chmod [OPTION]... --reference=RFILE FILE...
+Change the mode of each FILE to MODE.
+With --reference, change the mode of each FILE to that of RFILE.
+
+  -c, --changes          like verbose but report only when a change is made
+  -f, --silent, --quiet  suppress most error messages
+  -v, --verbose          output a diagnostic for every file processed
+      --no-preserve-root  do not treat '/' specially (the default)
+      --preserve-root    fail to operate recursively on '/'
+      --reference=RFILE  use RFILE's mode instead of MODE values
+  -R, --recursive        change files and directories recursively
+      --help     display this help and exit
+      --version  output version information and exit
+
+Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'.
+
+GNU coreutils online help: <https://www.gnu.org/software/coreutils/>
+Report any translation bugs to <https://translationproject.org/team/>
+Full documentation <https://www.gnu.org/software/coreutils/chmod>
+or available locally via: info '(coreutils) chmod invocation'
+
+AI interpretation
+
+"Each MODE is of the form '[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+'." guess from this syntax for chmod
+Given the syntax `[ugoa]*([-+=]([rwxXst]*|[ugo]))+|[-+=][0-7]+`, `chmod` follows a pattern for determining permissions for the user owner (`u`), group (`g`), others (`o`), and all users (`a`).
+
+Here's a breakdown of the syntax:
+- `[ugoa]*`: This represents the user categories: `u` (user/owner), `g` (group), `o` (others), and `a` (all). You can use one or a combination of these.
+- `([-+=]([rwxXst]*|[ugo]))+`: This specifies the operation and permissions:
+  - `-` removes permissions.
+  - `+` adds permissions.
+  - `=` explicitly sets permissions.
+
+  The permissions can be:
+  - `r`: read
+  - `w`: write
+  - `x`: execute
+  - `X`: execute only if it is a directory or already has execute permission for some user
+  - `s`: set user or group ID on execution
+  - `t`: sticky bit
+
+You can also set the permissions using octal notation `[-+=][0-7]+`.
+
+For example, to set read and write permissions for the user owner, and read-only for the group and others on `example.txt`:
+
+`chmod u=rw,g=r,o=r example.txt`
+
+`chmod u+rw,go+r example.txt`
+
+`chmod 644 example.txt`
+
+[peramsathyam@ip-172-31-20-186 ~]$ sudo chown peramsathyam:ec2-user index.html
+[peramsathyam@ip-172-31-20-186 ~]$ sudo chmod u+rw index.html
+
+Firewall setup
+# https://tecadmin.net/configuring-firewalld-on-centos/
+
+sudo yum install firewalld -y
+sudo firewall-cmd --permanent --add-service=http
+sudo systemctl enable firewalld
+sudo systemctl start firewalld
+sudo systemctl status firewalld
+sudo firewall-cmd --get-zones
+sudo firewall-cmd --get-zones
+sudo firewall-cmd --get-default-zone
+sudo firewall-cmd --zone=public --list-all
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload

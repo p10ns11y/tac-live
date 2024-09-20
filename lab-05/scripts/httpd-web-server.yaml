@@ -1,0 +1,31 @@
+#cloud-config-httpd-system
+
+groups:
+  - ec2-user: [adm]
+
+users:
+  - default
+  - name: peramsathyam
+    gecos: Peram Sathyam
+    shell: /bin/bash
+    primary_group: ec2-user
+    sudo: ALL=(ALL) NOPASSWD:ALL
+    groups: adm
+    lock_passwd: false
+    ssh_authorized_keys:
+      - ssh-ed25519 <ssh public key> <key_name in aws_instance resource block>
+
+runcmd:
+  - touch /home/peramsathyam/index.html
+  - echo '<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Document</title></head><body><h1>Peram Sathyam'\''s terraform</h1></body></html>' >> /home/peramsathyam/index.html
+  - sudo chown peramsathyam:ec2-user index.html
+  - sudo chmod u+rw index.html
+  - sudo yum update
+  - sudo yum install httpd -y
+  - sudo yum install firewalld -y
+  - sudo systemctl enable firewalld
+  - sudo systemctl start firewalld
+  - sudo firewall-cmd --permanent --add-service=http
+  - sudo cp /home/peramsathyam/index.html /var/www/html
+  - sudo systemctl enable httpd
+  - sudo systemctl start httpd

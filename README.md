@@ -4,6 +4,10 @@
 
 https://prowse.tech
 
+# Completed labs
+
+1 -7 and 9 (which is not covered in the webinar)
+
 ## Introduction
 
 Hello and Welcome!
@@ -24,9 +28,9 @@ To follow along with me I suggest you have the following ready:
 
   Update the system:
 
-    Debian/Ubuntu: `apt update && apt upgrade -y`
+  Debian/Ubuntu: `apt update && apt upgrade -y`
 
-    Fedora/CentOS: `dnf update -y`
+  Fedora/CentOS: `dnf update -y`
 
   > Note: I suggest using VirtualBox, VMware Workstation, KVM or Proxmox for your virtual machines.
 
@@ -59,7 +63,7 @@ I hope you enjoy the webinar. If you have any questions you can contact me at:
 
 - Amazon Web Services (AWS) account setup
 
-  https://aws.amazon.com/account/  
+  https://aws.amazon.com/account/
 
 - AWS IAM Setup
 
@@ -70,15 +74,15 @@ I hope you enjoy the webinar. If you have any questions you can contact me at:
   https://www.hashicorp.com/certification/terraform-associate
 
 - Terraform Docs:
-  
+
   https://developer.hashicorp.com/terraform/docs
 
 - Terraform Registry:
-  
+
   https://registry.terraform.io/
 
 - Terraform Language Documentation:
-  
+
   https://developer.hashicorp.com/terraform/language
 
 ## Further Study
@@ -86,12 +90,18 @@ I hope you enjoy the webinar. If you have any questions you can contact me at:
 - Terraform Certification Video Course:
 
   - [O'Reilly](https://learning.oreilly.com/course/hashicorp-certified-terraform/9780138195366/)
-  - [InformIT](https://click.linksynergy.com/link?id=g%2f%2f2PZbywdw&offerid=145238.248089780138195397&bids=145238.248089780138195397&bids=145238.248089780138195397&type=2&murl=https%3a%2f%2fwww.pearsonitcertification.com%2ftitle%2f9780138195397&) 
+  - [InformIT](https://click.linksynergy.com/link?id=g%2f%2f2PZbywdw&offerid=145238.248089780138195397&bids=145238.248089780138195397&bids=145238.248089780138195397&type=2&murl=https%3a%2f%2fwww.pearsonitcertification.com%2ftitle%2f9780138195397&)
 
 - Terraform Study Guide:
 
   https://developer.hashicorp.com/terraform/tutorials/certification/associate-study
 
 - Terraform Review Guide:
-  
+
   https://developer.hashicorp.com/terraform/tutorials/certification/associate-review
+
+  ### Links to the webinar sessions
+
+  [Day 1](https://learning.oreilly.com/live-events/-/0636920082746/0642572006651/?utm_medium%3Dcalendar%26utm_source%3Dschedule%252Breminder%26utm_campaign%3Dcalendar%252Bgoogle%26utm_content%3Dhashicorp-terraform-associate-exam-cram&sa=D&source=calendar&usd=2&usg=AOvVaw3oj9PZH2yEdbHuPx6g5rPz)
+
+  [Day 2](https://learning.oreilly.com/live-events/-/0636920082746/0642572006651/?utm_medium%3Dcalendar%26utm_source%3Dschedule%252Breminder%26utm_campaign%3Dcalendar%252Bgoogle%26utm_content%3Dhashicorp-terraform-associate-exam-cram&sa=D&source=calendar&usd=2&usg=AOvVaw3oj9PZH2yEdbHuPx6g5rPz)
