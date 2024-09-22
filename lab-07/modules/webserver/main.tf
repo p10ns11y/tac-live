@@ -15,4 +15,8 @@ resource "aws_instance" "web_server" {
   tags = {
     Name = "${var.webserver_name} webserver"
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }

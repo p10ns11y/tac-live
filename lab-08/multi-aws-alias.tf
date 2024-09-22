@@ -11,8 +11,12 @@ provider "aws" {
   region = "us-east-2"
 }
 
-## Later, resources can be created on the second provider by  
+## Later, resources can be created on the second provider by
 ## using the alias: aws.ohio
 resource "aws_instance" "test" {
   provider = aws.ohio
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }

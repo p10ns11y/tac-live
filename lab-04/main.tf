@@ -25,6 +25,10 @@ resource "aws_instance" "lab_04" {
   tags = {
     Name = "Lab_04-sg_ssh_https"
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }
 
 # Although cidr_blocks, ipv6_cidr_blocks, prefix_list_ids,

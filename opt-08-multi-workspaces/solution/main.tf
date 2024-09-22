@@ -20,4 +20,8 @@ resource "aws_instance" "workspace_testing" {
   tags = {
     Name = var.name
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }

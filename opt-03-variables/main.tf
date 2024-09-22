@@ -21,4 +21,8 @@ resource "aws_instance" "opt_03" {
     Name = var.name
     Category = var.category
   }
+  root_block_device {
+    encrypted = true
+  }
+  monitoring = true
 }

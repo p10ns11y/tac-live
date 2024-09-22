@@ -18,8 +18,12 @@ resource "aws_instance" "opt_04" {
   instance_type = "t2.micro"
 
   # Add your block devices here!
-  
+
   tags = {
     Name = "Opt-04-Server"
+  }
+  monitoring = true
+  root_block_device {
+    encrypted = true
   }
 }

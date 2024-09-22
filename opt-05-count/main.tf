@@ -17,9 +17,13 @@ resource "aws_instance" "opt_05" {
   # add your count meta-argument here!
   ami           = "ami-0b40807e5dc1afecf"
   instance_type = "t2.micro"
-    
+
   tags = {
     # Modify the Name tag so that it uses the count_index argument!
     Name = "Opt-05-Server"
   }
+  root_block_device {
+    encrypted = true
+  }
+  monitoring = true
 }

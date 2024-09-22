@@ -14,11 +14,15 @@ resource "aws_instance" "lab_10-a" {
     aws_security_group.sg_https.id,
     aws_security_group.sg_http.id
   ]
-  
+
   user_data = file("../scripts/hulk.yaml")
 
   tags = {
-    Name                  = "Lab_10-A"    
+    Name                  = "Lab_10-A"
+  }
+  monitoring = true
+  root_block_device {
+    encrypted = true
   }
 }
 
@@ -31,11 +35,15 @@ resource "aws_instance" "lab_10-b" {
     aws_security_group.sg_https.id,
     aws_security_group.sg_http.id
   ]
-  
+
   user_data = file("../scripts/hulk.yaml")
 
   tags = {
-    Name                  = "Lab_10-B"    
+    Name                  = "Lab_10-B"
+  }
+  monitoring = true
+  root_block_device {
+    encrypted = true
   }
 }
 
@@ -86,4 +94,3 @@ resource "aws_security_group" "sg_http" {
     to_port     = 0
   }
 }
-

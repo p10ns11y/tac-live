@@ -14,6 +14,10 @@ resource "aws_instance" "lab_05" {
   tags = {
     Name = "Lab_05-sg_ssh_https"
   }
+  root_block_device {
+    encrypted = true
+  }
+  monitoring = true
 }
 
 resource "aws_key_pair" "deployer" {

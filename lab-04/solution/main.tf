@@ -25,6 +25,10 @@ resource "aws_instance" "lab_04" {
     Name      = "Lab_04-sg_ssh_https"
     legend    = "Paul Atreides"
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }
 
 resource "aws_security_group" "sg_ssh" {

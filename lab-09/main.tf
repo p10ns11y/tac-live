@@ -37,4 +37,8 @@ resource "aws_instance" "lab_09" {
   tags = {
     Name = "Lab-09-Terraform-Cloud"
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }

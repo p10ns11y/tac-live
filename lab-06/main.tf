@@ -20,4 +20,8 @@ resource "aws_instance" "lab_06" {
   tags = {
     Name      = var.instance_name
   }
+  root_block_device {
+    encrypted = true
+  }
+  monitoring = true
 }

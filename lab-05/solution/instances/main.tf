@@ -7,13 +7,17 @@ resource "aws_instance" "lab_05" {
     aws_security_group.sg_https.id,
     aws_security_group.sg_http.id
   ]
-  
+
   user_data = file("../scripts/apache-mkdocs.yaml")
 
   tags = {
     Name                  = "Lab_05"
     Vanquisher_of_Gothmog = "Ecthelion"
     Vanquisher_of_Ecthelion = "Gothmog"
+  }
+  monitoring = true
+  root_block_device {
+    encrypted = true
   }
 }
 

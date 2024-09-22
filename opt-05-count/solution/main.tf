@@ -21,4 +21,8 @@ resource "aws_instance" "opt_05" {
   tags = {
     Name = "Opt-05-Server-${count.index + 1}"
   }
+  root_block_device {
+    encrypted = true
+  }
+  monitoring = true
 }

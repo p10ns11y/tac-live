@@ -20,4 +20,8 @@ resource "aws_instance" "app_server" {
   tags = {
     Name = "Lab-03-AWS-Instance"
   }
+  monitoring = true
+  root_block_device {
+    encrypted = true
+  }
 }
